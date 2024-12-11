@@ -16,7 +16,8 @@ The application takes **video files (.mp4, .mov)** and **small images (.jpg, .pn
 
 ## **Demo 🚀**
 
-With Mac Saver Builder, simply drag and drop or select your video and image files to quickly generate .saver screen savers.  
+With Mac Saver Builder, simply drag and drop or select your video and image files to quickly generate .saver screen savers.
+
 ![App Demo](https://raw.githubusercontent.com/GetInfo-ACN/MacSaverBuilder/refs/heads/main/Screenshots/App_Demo.gif)
 
 ## **Requirements ⚙️**
@@ -70,4 +71,4 @@ While we welcome users to modify and enhance the application to suit their needs
 
 ## **License 🏷️**
 
-This project is licensed under the MIT License. Please refer to the LICENSE file for more details.
+This project is licensed under the MIT License. Please refer to the [LICENSE](https://github.com/GetInfo-ACN/MacSaverBuilder/blob/main/LICENSE) file for more details.
