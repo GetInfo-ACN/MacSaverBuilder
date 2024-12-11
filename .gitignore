@@ -1,3 +1,35 @@
+# macOS system files
+.DS_Store
+
+# Thumbnails
+Thumbs.db
+
+# Xcode specific files
+*.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
+.idea/
+
+# Files for compiled code
+*.o
+*.obj
+*.bin
+
+# Dependencies
+/Pods/
+
+# Build directory
+/build/
+
+/DerivedData/
+
+# Log files
+*.log
+
+# User-specific files
+*.swp
+*.swo
 
 .DS_Store
 Example/.DS_Store
