@@ -41,19 +41,15 @@ _(GitHub link will be placed here.)_
 
 ## **Documentation 📝**
 
-For more information about the features and usage of the application, visit our **wiki page** or refer to the following links:
+For more information about the features and usage of the application, visit our [wiki page](https://github.com/GetInfo-ACN/MacSaverBuilder/wiki) or refer to the following links:
 
-**Jamf Pro Deployment**  
-A step-by-step guide for deploying `.saver` screen savers via Jamf Pro (MDM).
+[Jamf Pro Deployment](https://github.com/GetInfo-ACN/MacSaverBuilder/wiki/1.-Jamf-Pro-Deployment) A step-by-step guide for deploying `.saver` screen savers via Jamf Pro (MDM).
 
-**End User Installation**  
-Instructions for the manual installation of screen savers for end users.
+[End User Installation](https://github.com/GetInfo-ACN/MacSaverBuilder/wiki/2.-End-User-Installation) Instructions for the manual installation of screen savers for end users.
 
-**Template Keynote**  
-Pre-designed Keynote templates (`.key` files for video and thumbnail) to assist in creating precise thumbnails and videos for screen savers.
+[Template Keynote](https://github.com/GetInfo-ACN/MacSaverBuilder/wiki/3.-Template-Keynote) Pre-designed `Keynote` templates to assist in creating precise thumbnails and videos for screen savers.
 
-**Troubleshooting and Support**  
-Tips for resolving issues or unexpected behaviors related to the Mac Saver Builder app and `.saver` outputs.
+[Troubleshooting and Support](https://github.com/GetInfo-ACN/MacSaverBuilder/wiki/4.-Troubleshooting-and-Support) Tips for resolving issues or unexpected behaviors related to the Mac Saver Builder app and `.saver` outputs.
 
 
 ## **Known Issues ⚠️**
