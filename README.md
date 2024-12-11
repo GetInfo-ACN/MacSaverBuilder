@@ -35,11 +35,11 @@ With Mac Saver Builder, simply drag and drop or select your video and image file
 
 ## **Download 📦**
 
-Download the signed final version of the application:  
-_(GitHub link will be placed here.)_  
+**Mac Saver Builder (Signed Application):** [Download](#)
 
-Example (unsigned) generated Screen Saver  
-_(GitHub link will be placed here.)_
+
+**Example Screen Saver (Unsigned):** [Download](https://github.com/GetInfo-ACN/MacSaverBuilder/raw/refs/heads/main/Example/Security%20Awareness.saver.zip)
+
 
 
 ## **Documentation 📝**
