@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>askForPassword</key>
+    <true/>
+    <key>askForPasswordDelay</key>
+    <integer>0</integer>
+    <key>idleTime</key>
+    <integer>300</integer>
+    <key>loginWindowIdleTime</key>
+    <integer>300</integer>
+    <key>loginWindowModulePath</key>
+    <string>/Library/Screen Savers/MyScreenSaver.saver</string>
+    <key>moduleName</key>
+    <string>MyScreenSaver</string>
+  </dict>
+</plist>

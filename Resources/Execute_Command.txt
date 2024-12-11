@@ -1,0 +1,7 @@
+MyScreenSaver.saver
+xattr -r -d com.apple.quarantine /Library/Screen\ Savers/MyScreenSaver.saver
+
+
+
+My Screen Saver.saver
+xattr -r -d com.apple.quarantine /Library/Screen\ Savers/My\ Screen\ Saver.saver
