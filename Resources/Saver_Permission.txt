@@ -3,7 +3,6 @@ sudo chown root:wheel /Library/Screen\ Savers/MyScreenSaver.saver
 sudo chmod 755 /Library/Screen\ Savers/MyScreenSaver.saver
 
 
-
 My Screen Saver.saver
 sudo chown root:wheel /Library/Screen\ Savers/My\ Screen\ Saver.saver
 sudo chmod 755 /Library/Screen\ Savers/My\ Screen\ Saver.saver
