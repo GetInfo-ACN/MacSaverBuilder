@@ -1,6 +1,6 @@
 ## **Mac Saver Builder**
 
-![Release](https://img.shields.io/badge/Release-v1.0-green) ![macOS](https://img.shields.io/badge/macOS-14%2B-lightgrey) ![Xcode](https://img.shields.io/badge/Xcode-16.0-blue) ![Swift](https://img.shields.io/badge/Swift-5.9-orange) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Release](https://img.shields.io/badge/Release-v1.0-green)  ![macOS](https://img.shields.io/badge/macOS-14%2B-red)  ![Xcode](https://img.shields.io/badge/Xcode-16.0-blue)  ![Swift](https://img.shields.io/badge/Swift-5.9-orange)  ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ![App Banner](https://github.com/GetInfo-ACN/MacSaverBuilder/blob/main/Screenshots/App_Banner.png)
 
