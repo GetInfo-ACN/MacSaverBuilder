@@ -41,6 +41,8 @@ With Mac Saver Builder, simply drag and drop or select your video and image file
 **Example Screen Saver (Unsigned):** [Download](https://github.com/GetInfo-ACN/MacSaverBuilder/raw/refs/heads/main/Example/Security%20Awareness.saver.zip)
 
 
+![App Appearance](https://github.com/GetInfo-ACN/MacSaverBuilder/blob/main/Screenshots/App_Appearance.png)
+
 
 ## **Documentation 📝**
 
