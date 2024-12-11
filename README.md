@@ -2,7 +2,7 @@
 
 ![Release](https://img.shields.io/badge/Release-v1.0-green) ![macOS](https://img.shields.io/badge/macOS-14%2B-lightgrey) ![Xcode](https://img.shields.io/badge/Xcode-16.0-blue) ![Swift](https://img.shields.io/badge/Swift-5.9-orange) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-![App Banner](https://raw.githubusercontent.com/GetInfo-ACN/MacSaverBuilder/main/Screenshots/App_Banner.png)
+![App Banner](https://github.com/GetInfo-ACN/MacSaverBuilder/blob/main/Screenshots/App_Banner.png)
 
 Screen savers are standard security controls used to limit access to a Mac and the user's session when the Mac is idle or left unattended. Mac Saver Builder is an innovative tool that allows you to create custom screen savers for macOS. This application caters to two primary user groups:
 
@@ -21,7 +21,8 @@ The application takes **video files (.mp4, .mov)** and **small images (.jpg, .pn
 
 With Mac Saver Builder, simply drag and drop or select your video and image files to quickly generate .saver screen savers.
 
-![App Demo](https://raw.githubusercontent.com/GetInfo-ACN/MacSaverBuilder/refs/heads/main/Screenshots/App_Demo.gif)
+![App Demo](https://github.com/GetInfo-ACN/MacSaverBuilder/blob/main/Screenshots/App_Demo.gif)
+
 
 
 ## **Requirements ⚙️**
