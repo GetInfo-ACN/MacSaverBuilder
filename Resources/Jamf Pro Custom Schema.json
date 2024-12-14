@@ -1,0 +1,67 @@
+{
+  "title": "Mac Saver Builder (com.apple.screensaver)",
+  "description": "Configuration schema for macOS screen saver settings.",
+  "options": {
+    "remove_empty_properties": true
+  },
+  "properties": {
+    "askForPassword": {
+      "title": "Require Password",
+      "description": "Determines if a password is required to unlock the screen saver.",
+      "type": "boolean",
+      "default": true,
+      "options": {
+        "enum_titles": [
+          "Yes",
+          "No"
+        ],
+        "infoText": "Key name: askForPassword"
+      }
+    },
+    "askForPasswordDelay": {
+      "title": "Password Delay",
+      "description": "Time in seconds before requiring a password after the screen saver starts.",
+      "type": "integer",
+      "default": 0,
+      "options": {
+        "infoText": "Key name: askForPasswordDelay"
+      }
+    },
+    "idleTime": {
+      "title": "Idle Time",
+      "description": "Time in seconds before the screen saver starts when the system is idle.",
+      "type": "integer",
+      "default": 300,
+      "options": {
+        "infoText": "Key name: idleTime"
+      }
+    },
+    "loginWindowIdleTime": {
+      "title": "Login Window Idle Time",
+      "description": "Time in seconds before the screen saver starts at the login window.",
+      "type": "integer",
+      "default": 300,
+      "options": {
+        "infoText": "Key name: loginWindowIdleTime"
+      }
+    },
+    "loginWindowModulePath": {
+      "title": "Screen Saver Path for Login Window",
+      "description": "The path to the screen saver used at the login window.",
+      "type": "string",
+      "default": "/Library/Screen Savers/MyScreenSaver.saver",
+      "options": {
+        "infoText": "Key name: loginWindowModulePath"
+      }
+    },
+    "moduleName": {
+      "title": "Screen Saver Name",
+      "description": "The name of the screen saver to use.",
+      "type": "string",
+      "default": "MyScreenSaver",
+      "options": {
+        "infoText": "Key name: moduleName"
+      }
+    }
+  }
+}
