@@ -94,3 +94,4 @@ This project is licensed under the MIT License. Please refer to the [LICENSE](ht
 ## **Contributor 👨‍💻**
 
 This project was developed by [**Hüseyin Usta**](https://github.com/huseyinusta) as part of an initiative by **GetInfo**. Although the project was not created by a professional developer, it is built with care and aims to provide useful tools for macOS users.
+
