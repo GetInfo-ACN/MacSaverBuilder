@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD10EB012CFD04690069C154 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD10EB002CFD04690069C154 /* Credits.rtf */; };
-		CD2085E62CF87FBD00B49D37 /* ScreenSaverViewer.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD2085D82CF8772F00B49D37 /* ScreenSaverViewer.saver */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2085E62CF87FBD00B49D37 /* ScreenSaverViewer.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD2085D82CF8772F00B49D37 /* ScreenSaverViewer.saver */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CD34FCB72CF8ED500006FFB8 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2085DD2CF877A000B49D37 /* ScreenSaver.framework */; };
 		CDEB8C7E2CFB8D7900323993 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD34FCB82CF8ED6D0006FFB8 /* AVKit.framework */; };
 /* End PBXBuildFile section */
@@ -171,7 +171,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					CD2085D72CF8772F00B49D37 = {
 						CreatedOnToolsVersion = 16.1;
@@ -242,7 +242,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -251,7 +253,7 @@
 				INFOPLIST_FILE = ScreenSaverViewer/Info.plist;
 				INFOPLIST_KEY_NSPrincipalClass = ScreenSaverViewer;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GetInfo.MacSaverBuilder.Viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -266,7 +268,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -275,7 +279,7 @@
 				INFOPLIST_FILE = ScreenSaverViewer/Info.plist;
 				INFOPLIST_KEY_NSPrincipalClass = ScreenSaverViewer;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GetInfo.MacSaverBuilder.Viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -344,6 +348,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -401,6 +406,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -419,8 +425,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mac Saver Builder/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = DY593NUUF2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mac-Saver-Builder-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mac Saver Builder";
@@ -431,7 +440,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GetInfo.MacSaverBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -454,8 +463,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mac Saver Builder/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = DY593NUUF2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mac-Saver-Builder-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mac Saver Builder";
@@ -466,7 +478,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GetInfo.MacSaverBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -46,6 +46,16 @@ struct ContentView: View {
             .animation(.easeInOut, value: videoURL != nil && thumbnailURL != nil)
         }
         .padding(24)
+        .background {
+            if #available(macOS 15.0, *) {
+                // macOS 26+ Liquid Glass effect
+                Rectangle()
+                    .fill(.ultraThinMaterial)
+            } else {
+                // macOS 14 fallback - transparent (system handles background)
+                Color.clear
+            }
+        }
         .alert("Mac Saver Builder", isPresented: $showAlert) {
             Button("OK", role: .cancel) { }
         } message: {
@@ -105,7 +115,7 @@ struct ContentView: View {
                         dirChmodTask.arguments = ["755", saveURL.path]
                         try dirChmodTask.run()
                         dirChmodTask.waitUntilExit()
-
+                        
                         let resourcesPath = saveURL.appendingPathComponent("Contents/Resources")
                         let filesChmodTask = Process()
                         filesChmodTask.executableURL = URL(fileURLWithPath: "/bin/chmod")
@@ -116,6 +126,8 @@ struct ContentView: View {
                     } catch {
                         print("Permission setting failed: \(error.localizedDescription)")
                     }
+                    
+                    stripAndAdHocSignSaver(at: saveURL)
                     
                     alertMessage = """
 Screen saver created successfully!
@@ -143,6 +155,38 @@ Location: \(saveURL.path)
         }
         return nil
     }
+    
+    /// Remove any (broken) signature, then ad-hoc re-sign so the .saver runs without
+    /// "invalid Info.plist" / "damaged" / Gatekeeper block. Matches user-reported fix.
+    private func stripAndAdHocSignSaver(at saverURL: URL) {
+        let macOSPath = saverURL.appendingPathComponent("Contents/MacOS")
+        let fileManager = FileManager.default
+        let codesign = "/usr/bin/codesign"
+        
+        // 1) Remove existing (broken) signatures
+        if let executables = try? fileManager.contentsOfDirectory(at: macOSPath, includingPropertiesForKeys: nil) {
+            for execURL in executables {
+                runCodesign(codesign, ["--remove-signature", execURL.path])
+            }
+        }
+        runCodesign(codesign, ["--remove-signature", saverURL.path])
+        
+        // 2) Ad-hoc re-sign (executables first, then bundle)
+        if let executables = try? fileManager.contentsOfDirectory(at: macOSPath, includingPropertiesForKeys: nil) {
+            for execURL in executables {
+                runCodesign(codesign, ["--force", "--sign", "-", execURL.path])
+            }
+        }
+        runCodesign(codesign, ["--force", "--deep", "--sign", "-", saverURL.path])
+    }
+    
+    private func runCodesign(_ path: String, _ args: [String]) {
+        let p = Process()
+        p.executableURL = URL(fileURLWithPath: path)
+        p.arguments = args
+        try? p.run()
+        p.waitUntilExit()
+    }
 }
 
 struct DropArea: View {
@@ -156,6 +200,13 @@ struct DropArea: View {
         VStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.gray.opacity(0.1))
+                .background {
+                    if #available(macOS 15.0, *) {
+                        // macOS 26+ Material effect overlay
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.thinMaterial)
+                    }
+                }
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .strokeBorder(
@@ -165,7 +216,7 @@ struct DropArea: View {
                                 dashPhase: 0
                             )
                         )
-                        .foregroundColor(isTargeted ? .white : .gray.opacity(0.5))
+                        .foregroundColor(isTargeted ? .primary.opacity(0.8) : .secondary.opacity(0.5))
                 )
                 .overlay(
                     Group {
@@ -185,7 +236,7 @@ struct DropArea: View {
                                     .font(.headline)
                                 Text(subtitle)
                                     .font(.subheadline)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.secondary)
                                     .multilineTextAlignment(.center)
                             }
                         }
