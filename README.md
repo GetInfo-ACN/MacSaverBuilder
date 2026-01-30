@@ -73,6 +73,8 @@ In the Screen Saver section, preview may sometimes appear as a black screen. Sel
 
 When multiple traditional .saver files exist, switching between them may cause instability. In such cases, restarting the Mac or using **Activity Monitor** to **“Force Quit”** the `legacyScreenSaver (Wallpaper)` process can fix the issue.
 
+Generated .saver files are unsigned. Remove the quarantine attribute before using the screen saver by running `sudo xattr -rc` with your .saver path (e.g. `sudo xattr -rc ~/Desktop/MyScreenSaver.saver`) before installing or copying it to your Screen Savers folder.
+
 
 ## **Privacy Policy 🔒**
 
